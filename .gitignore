@@ -3,5 +3,5 @@
 .vscode/c_cpp_properties.json
 .vscode/launch.json
 .vscode/ipch
-.uirb/data/eeprom/backups
-.uirb/data/eeprom/backup_archives
+uirb/data/eeprom/backups
+uirb/data/eeprom/backup_archives
