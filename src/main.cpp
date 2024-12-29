@@ -52,7 +52,7 @@ void setup() {
 
   #if defined(UIRB_CORE_LIB)
   SERIAL_PRINTLN(F("UIRBcore (" UIRB_CORE_LIB_VER_STR ") has been included."));  // Confirm inclusion of the UIRBCore library
-  
+
   // Initialize the UIRB hardware
   if (!uirb.begin()) {
       SERIAL_PRINTLN(F("UIRBcore Initialization Failed!"));
@@ -70,7 +70,7 @@ void setup() {
 
 void loop() {
   // Main code: runs repeatedly after setup()
-  SERIAL_PRINTLN(F("Looping..."));  // Print a message to indicate the loop is running
+  SERIAL_PRINTLN(millis());  // Print the current time
   delay(1000);  // Wait for 1 second
 }
 
