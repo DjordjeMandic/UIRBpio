@@ -1,5 +1,10 @@
 #include <Arduino.h>
 
+// Check if current build is a debug build
+#if defined(__PLATFORMIO_BUILD_DEBUG__)
+  #define DEBUG_BUILD
+#endif  // defined(DEBUG_BUILD)
+
 // Check if the AVR Debugger library is installed
 #if __has_include(<avr8-stub.h>)
   #include <avr8-stub.h>   // Include the AVR Debugger library
@@ -44,11 +49,16 @@ void setup() {
 
   #if defined(AVR_DEBUG)
     debug_init();  // Initialize the AVR Debugger if enabled
+    breakpoint();  // Set a breakpoint at the start of the program
   #endif  // defined(AVR_DEBUG)
 
   // Start serial communication
   SERIAL_BEGIN(BAUD_RATE);
   SERIAL_PRINTLN(F("Hello PIO from UIRB!"));  // Print a greeting message
+
+  #if defined(DEBUG_BUILD)
+  SERIAL_PRINTLN(F("WARNING: This is a debug build!"));
+  #endif  // defined(DEBUG_BUILD)
 
   #if defined(UIRB_CORE_LIB)
   SERIAL_PRINTLN(F("UIRBcore (" UIRB_CORE_LIB_VER_STR ") has been included."));  // Confirm inclusion of the UIRBCore library
