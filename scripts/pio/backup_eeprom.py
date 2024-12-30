@@ -130,7 +130,7 @@ env.AddTarget(
     ],
     group="Platform",
     title="Backup EEPROM",
-    description="Reads EEPROM in both Intel HEX and binary format."
+    description="Reads EEPROM in binary format."
 )
 
 env.AddTarget(
