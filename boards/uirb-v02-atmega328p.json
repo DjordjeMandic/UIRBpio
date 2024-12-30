@@ -31,8 +31,7 @@
     "debug": {
         "simavr_target": "atmega328p",
         "avr-stub": {
-            "speed": 1000000,
-            "port": "$UPLOAD_PORT"
+            "speed": 1000000
         }
     },
     "frameworks": [ "arduino" ],
