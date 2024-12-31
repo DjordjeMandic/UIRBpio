@@ -14,7 +14,7 @@ SVD files are XML-based files that define the hardware details of a microcontrol
 - Allow debugging tools to interpret microcontroller registers and values accurately.
 - Provide essential details about memory-mapped peripherals for developers.
 
-## References
+## Details
 
 - [ARM CMSIS SVD Overview](https://arm-software.github.io/CMSIS_5/SVD/html/index.html)
 - [PlatformIO `debug_svd_path`](https://docs.platformio.org/en/stable/projectconf/sections/env/options/debug/debug_svd_path.html)

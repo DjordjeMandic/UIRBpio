@@ -21,6 +21,6 @@ Used exclusively for EEPROM-related data. This is further divided into:
 ## Notes
 
 - This structure may change in the future as additional features are implemented.
-- Make sure to review the `backup_eeprom.py` script for details on how backups are handled.
+- Make sure to review the [`backup_eeprom.py`](../scripts/pio/backup_eeprom.py) script for details on how backups are handled.
 
 For additional details, refer to the main [README](../README.md) file.

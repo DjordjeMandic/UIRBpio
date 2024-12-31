@@ -20,14 +20,14 @@ The repository structure follows the basic PlatformIO project layout. Refer to t
 
 ### Key Directories
 
-- **[`boards/`](./boards/)**: Contains custom board configurations.
+- **[`boards/`](./boards/)**: Contains [custom board configurations](./boards/README.md).
   - [`uirb-v02-atmega328p.json`](./boards/uirb-v02-atmega328p.json): Predefined settings for the UIRB V0.2 board.
-- **[`include/`](./include/)**: Shared [header files](./include/README.md) for the project.
-- **[`lib/`](./lib/)**: Custom [libraries](./lib/README.md) for additional functionality.
+- **[`include/`](./include/)**: Shared [header files](./include/README) for the project.
+- **[`lib/`](./lib/)**: Custom [libraries](./lib/README) for additional functionality.
 - **[`scripts/`](./scripts/)**: Utility [scripts](./scripts/README.md), such as [`backup_eeprom.py`](./scripts/pio/backup_eeprom.py) for managing EEPROM backups.
 - **[`src/`](./src/)**: Source code of the project.
 - **[`svd/`](./svd/)**: [System View Description](./svd/README.md) files for debugging.
-- **[`test/`](./test/)**: Set up for [unit testing](./test/README.md) using PlatformIO.
+- **[`test/`](./test/)**: Set up for [unit testing](./test/README) using PlatformIO.
 - **[`uirb/`](./uirb/)**: Stores project-specific [data](./uirb/README.md), including EEPROM backups.
 
 ---
@@ -55,15 +55,15 @@ cd UIRBpio
 
 ### Environment Configurations
 
-1. **Default (uirb-v02)**:
+1. **Default (`uirb-v02`)**:
    - Standard release build for the UIRB V0.2 board, using [MiniCore](https://github.com/MCUdude/MiniCore/blob/master/PlatformIO.md) with the [urboot](https://github.com/stefanrueger/urboot) bootloader (defined in [`uirb-v02-atmega328p.json`](./boards/uirb-v02-atmega328p.json)).
-2. **USBasp (uirb-v02-usbasp)**:
+2. **USBasp (`uirb-v02-usbasp`)**:
    - Standard release build for the UIRB V0.2 board, using the [USBasp](https://www.fischl.de/usbasp/) programmer instead of a bootloader.
-3. **Debug (uirb-v02-dbg)**:
+3. **Debug (`uirb-v02-dbg`)**:
    - Debug build optimized for [debugging](https://docs.platformio.org/en/latest/plus/debugging.html).
-4. **SimAVR (uirb-v02-dbg-simavr)**:
+4. **SimAVR (`uirb-v02-dbg-simavr`)**:
    - Debug build with simulation and debugging via [SimAVR](https://docs.platformio.org/en/latest/plus/debug-tools/simavr.html#debugging-tool-simavr).
-5. **AVR-Stub (uirb-v02-dbg-avrstub)**:
+5. **AVR-Stub (`uirb-v02-dbg-avrstub`)**:
    - Debug build with serial debugging support via [avr-stub](https://docs.platformio.org/en/latest/plus/debug-tools/avr-stub.html#debugging-tool-avr-stub).
 
 ### Custom Targets & EEPROM Management
