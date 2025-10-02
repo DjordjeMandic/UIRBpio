@@ -12,14 +12,14 @@
 #endif  // __has_include(<avr8-stub.h>)
 
 // Check if the UIRBCore library is installed
-#if __has_include(<UIRBCore.hpp>)
-  #include <UIRBCore.hpp>    // Include the UIRBCore library
+#if __has_include(<UIRBcore.hpp>)
+  #include <UIRBcore.hpp>    // Include the UIRBCore library
   using namespace uirbcore;  // Use the UIRBCore namespace for easy access to its classes and functions
 
   // Ensure the EEPROM contains valid UIRB hardware version data.
   // If the data is invalid, the system will hang and reboot during initialization.
   UIRB& uirb = UIRB::getInstance();  // Create a singleton instance of the UIRB class
-#endif  // __has_include(<UIRBCore.hpp>)
+#endif  // __has_include(<UIRBcore.hpp>)
 
 #if !defined(AVR_DEBUG)
   // Define the baud rate for serial communication
